@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="50e5a3c0-4357-4ed8-958a-039aed4fec8d" Publisher="CN=biac" Version="1.0.0.1" />
+  <Properties>
+    <DisplayName>FizzBuzzMetro</DisplayName>
+    <PublisherDisplayName>biac</PublisherDisplayName>
+    <Logo>Images\StoreLogo.png</Logo>
+    <Description>FizzBuzzMetro</Description>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2</OSMinVersion>
+    <OSMaxVersionTested>6.2</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="en-us" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="fizzbuzzmetro.exe" EntryPoint="FizzBuzzMetro.App">
+      <VisualElements DisplayName="FizzBuzzMetro" Logo="Images\Logo.png" SmallLogo="Images\SmallLogo.png" Description="FizzBuzzMetro" ForegroundText="light" BackgroundColor="#222222" InitialRotationPreference="portrait">
+        <DefaultTile ShowName="true" />
+        <SplashScreen Image="Images\SplashScreen.png" />
+      </VisualElements>
+    </Application>
+  </Applications>
+</Package>

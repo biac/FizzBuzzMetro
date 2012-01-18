@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="FizzBuzzMetro.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="768" d:DesignWidth="1366">
+
+    <Grid x:Name="LayoutRoot" Background="#FF0088CC">
+        <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock FontFamily="Comic Sans MS" FontSize="56"
+                       TextAlignment="Center"
+                       >FizzBuzz@Metro</TextBlock>
+            <TextBlock x:Name="TextOutput" FontSize="72" TextAlignment="Center" 
+                       FontFamily="Comic Sans MS" FontWeight="Bold" 
+                       Margin="0,80,0,0">
+                1 - 1
+            </TextBlock>
+            <Button x:Name="ButtonSayNext" Click="ButtonSayNext_Click"
+                    FontSize="48" FontFamily="Comic Sans MS" 
+                    HorizontalAlignment="Center"
+                    Margin="0,40,0,60" Padding="20,0,20,8">Say Next!</Button>
+        </StackPanel>
+        <ApplicationBar IsOpen="True" Height="120" VerticalAlignment="Bottom" DismissMode="LightDismiss" Opacity="0.8" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="1" x:Name="ButtonExit" Click="ButtonExit_Click" >
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Canvas Width="60" Height="60" >
+                                                <Ellipse Width="60" Height="60" Stroke="White" StrokeThickness="2" />
+                                                <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+                                            </Canvas>
+                                            <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                       FontSize="56" FontWeight="Black" Margin="0,0,0,4">X</TextBlock>
+                                            <TextBlock Grid.Row="1" HorizontalAlignment="Center">Exit</TextBlock>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Grid>
+        </ApplicationBar>
+    </Grid>
+    
+</UserControl>
